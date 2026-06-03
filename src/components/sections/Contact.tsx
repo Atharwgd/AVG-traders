@@ -77,9 +77,8 @@ export default function Contact() {
                   <span className="text-terracotta mt-0.5">✉</span>
                   <div>
                     <div className="text-soil/40 text-xs uppercase tracking-wide mb-0.5">Email</div>
-                    {/* PLACEHOLDER: Replace with real business email */}
-                    <a href="mailto:trade@avgexports.com" className="hover:text-terracotta transition-colors">
-                      trade@avgexports.com
+                    <a href="mailto:business@avgtraders.com" className="hover:text-terracotta transition-colors">
+                      business@avgtraders.com
                     </a>
                   </div>
                 </div>
@@ -87,9 +86,8 @@ export default function Contact() {
                   <span className="text-terracotta mt-0.5">📞</span>
                   <div>
                     <div className="text-soil/40 text-xs uppercase tracking-wide mb-0.5">Phone / WhatsApp</div>
-                    {/* PLACEHOLDER: Replace with real phone/WhatsApp number */}
-                    <a href="tel:+919999999999" className="hover:text-terracotta transition-colors">
-                      +91 99999 99999
+                    <a href="tel:+917058875028" className="hover:text-terracotta transition-colors">
+                      +91 70588 75028
                     </a>
                   </div>
                 </div>

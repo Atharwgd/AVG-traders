@@ -15,9 +15,8 @@ export default function Footer() {
             <p className="font-poppins text-sm leading-relaxed max-w-xs">
               Trusted onion traders and exporters from the Nashik belt — supplying fresh and dehydrated onions to buyers worldwide since the early 2000s.
             </p>
-            {/* PLACEHOLDER: Replace with real LinkedIn URL */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/avg-traders/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm hover:text-cream transition-colors"
@@ -63,13 +62,11 @@ export default function Footer() {
               Contact
             </p>
             <div className="flex flex-col gap-3 font-poppins text-sm">
-              {/* PLACEHOLDER: Replace with real business email */}
-              <a href="mailto:trade@avgexports.com" className="hover:text-cream transition-colors">
-                trade@avgexports.com
+              <a href="mailto:business@avgtraders.com" className="hover:text-cream transition-colors">
+                business@avgtraders.com
               </a>
-              {/* PLACEHOLDER: Replace with real phone */}
-              <a href="tel:+919999999999" className="hover:text-cream transition-colors">
-                +91 99999 99999
+              <a href="tel:+917058875028" className="hover:text-cream transition-colors">
+                +91 70588 75028
               </a>
               <address className="not-italic leading-relaxed text-cream/50">
                 Yeola, Nashik<br />
