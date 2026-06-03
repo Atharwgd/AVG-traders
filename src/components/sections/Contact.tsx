@@ -99,7 +99,7 @@ export default function Contact() {
                     <div className="text-soil/40 text-xs uppercase tracking-wide mb-0.5">Address</div>
                     {/* PLACEHOLDER: Replace with real office address */}
                     <address className="not-italic leading-relaxed">
-                      AVG Exports<br />
+                      AVG Traders<br />
                       Yeola, Nashik District<br />
                       Maharashtra 423401, India
                     </address>
@@ -113,6 +113,7 @@ export default function Contact() {
           <FadeUp delay={0.15}>
             <form
               onSubmit={handleSubmit}
+              suppressHydrationWarning
               className="bg-cream rounded-2xl border border-sand p-8 flex flex-col gap-5"
             >
               <div className="grid sm:grid-cols-2 gap-5">

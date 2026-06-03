@@ -21,7 +21,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm hover:text-cream transition-colors"
-              aria-label="AVG Exports on LinkedIn"
+              aria-label="AVG Traders on LinkedIn"
             >
               <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -81,7 +81,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-cream/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-poppins">
-          <p>© {year} AVG Exports. All rights reserved.</p>
+          <p>© {year} AVG Traders. All rights reserved.</p>
           <p className="text-cream/35">
             APEDA Recognised · IEC Holder · FSSAI Certified
           </p>

@@ -29,7 +29,7 @@ export default function About() {
             <FadeUp delay={0.2}>
               <div className="flex flex-col gap-5 text-soil/75 font-poppins text-base leading-relaxed">
                 <p>
-                  AVG Exports is a trading and export house rooted in the Nashik onion belt — the Lasalgaon–Yeola region that moves more onions than anywhere else in India. We're not farmers, and we're not a factory. We're the link that makes sure the right onions, at the right grade, reach buyers who can't afford surprises.
+                  AVG Traders is a trading and export house rooted in the Nashik onion belt — the Lasalgaon–Yeola region that moves more onions than anywhere else in India. We're not farmers, and we're not a factory. We're the link that makes sure the right onions, at the right grade, reach buyers who can't afford surprises.
                 </p>
                 <p>
                   What we do well is unglamorous and exactly what matters in this trade: sourcing from growers and mandis we actually know, grading honestly, packing properly, and handling documentation and logistics so every container lands clean, on time, and as specified. For two generations, our family has built its name trading onions through these markets — and that name is the reason buyers keep coming back.
@@ -56,7 +56,7 @@ export default function About() {
               {/* PLACEHOLDER IMAGE: Replace with founder / team photo at showroom or facility */}
               <Image
                 src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80"
-                alt="AVG Exports team — [PLACEHOLDER: Replace with real founder or team photo]"
+                alt="AVG Traders team — [PLACEHOLDER: Replace with real founder or team photo]"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

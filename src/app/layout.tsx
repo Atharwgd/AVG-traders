@@ -20,9 +20,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "AVG Exports — Trusted Onion Traders & Exporters from Nashik, India",
+  title: "AVG Traders — Trusted Onion Traders & Exporters from Nashik, India",
   description:
-    "AVG Exports is a trading and export house rooted in the Nashik onion belt. We supply fresh red, pink, and white onions alongside dehydrated onion flakes and powder to buyers worldwide.",
+    "AVG Traders is a trading and export house rooted in the Nashik onion belt. We supply fresh red, pink, and white onions alongside dehydrated onion flakes and powder to buyers worldwide.",
   keywords: [
     "onion exporter India",
     "fresh onion export",
@@ -30,19 +30,19 @@ export const metadata: Metadata = {
     "dehydrated onion powder",
     "Nashik onion",
     "onion trader Nashik",
-    "AVG Exports",
+    "AVG Traders",
   ],
   openGraph: {
-    title: "AVG Exports — Trusted Onion Traders & Exporters from Nashik, India",
+    title: "AVG Traders — Trusted Onion Traders & Exporters from Nashik, India",
     description:
       "Fresh red, pink & white onions and dehydrated onion flakes & powder — sourced from Nashik's onion belt and exported worldwide.",
     type: "website",
     locale: "en_IN",
-    siteName: "AVG Exports",
+    siteName: "AVG Traders",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AVG Exports — Onion Traders & Exporters, Nashik",
+    title: "AVG Traders — Onion Traders & Exporters, Nashik",
     description:
       "Fresh & dehydrated onions exported from the heart of India's onion trade.",
   },

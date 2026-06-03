@@ -8,7 +8,7 @@ import RevealText from "@/components/ui/RevealText";
 const photos = [
   {
     src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
-    alt: "Stored onion stock — [PLACEHOLDER: Replace with photo of AVG Exports warehouse / stored stock]",
+    alt: "Stored onion stock — [PLACEHOLDER: Replace with photo of AVG Traders warehouse / stored stock]",
     caption: "Storage & Stock",
     span: "lg:col-span-2",
   },
@@ -32,7 +32,7 @@ const photos = [
   },
   {
     src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
-    alt: "AVG Exports team — [PLACEHOLDER: Replace with team photo]",
+    alt: "AVG Traders team — [PLACEHOLDER: Replace with team photo]",
     caption: "The Team",
     span: "",
   },
