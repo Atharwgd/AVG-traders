@@ -39,7 +39,7 @@ export default function NavBar() {
             scrolled ? "text-soil" : "text-cream"
           }`}
         >
-          AVG <span className="text-terracotta">Exports</span>
+          AVG <span className="text-terracotta">Traders</span>
         </Link>
 
         {/* Desktop links */}

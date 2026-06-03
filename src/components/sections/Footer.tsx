@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4 lg:col-span-2">
             <p className="font-poppins font-bold text-xl text-cream tracking-tight">
-              AVG <span className="text-terracotta">Exports</span>
+              AVG <span className="text-terracotta">Traders</span>
             </p>
             <p className="font-poppins text-sm leading-relaxed max-w-xs">
               Trusted onion traders and exporters from the Nashik belt — supplying fresh and dehydrated onions to buyers worldwide since the early 2000s.
