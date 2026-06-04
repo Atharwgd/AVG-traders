@@ -37,7 +37,7 @@ export default function WhatsNext() {
 
         <FadeUp delay={0.25}>
           <p className="max-w-2xl text-soil/65 font-poppins text-base sm:text-lg leading-relaxed">
-            The world wants Indian onions in more forms and more places. We&apos;re scaling our dehydrated onion supply, deepening long-term partnerships with food manufacturers and importers, and opening new export markets — backed by the same sourcing and quality discipline that built our name over two generations.
+            The world wants Indian onions in more forms and more places. We&apos;re scaling our dehydrated onion and fried onion (birista) supply, deepening long-term partnerships with food manufacturers and importers, and opening new export markets — backed by the same sourcing and quality discipline that built our name over two generations.
           </p>
         </FadeUp>
 

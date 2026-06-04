@@ -36,6 +36,21 @@ const dehydratedProducts = [
     imageAlt: "AVG Traders dehydrated onion powder — finely milled food-grade powder and granules",
     accentColor: "olive" as const,
   },
+  {
+    name: "Fried Onion (Birista)",
+    descriptor:
+      "Crispy golden-fried onion slices — a staple of biryani and HoReCa kitchens, now available in export-grade bulk packs.",
+    chips: [
+      { label: "Colour", value: "Golden to dark brown" },
+      { label: "Moisture", value: "<5%" },
+      { label: "Oil", value: "15–20%" },
+      { label: "Use", value: "Biryani, ready meals, noodles, burger toppings, HoReCa" },
+      { label: "Pack", value: "Bulk & Retail" },
+    ],
+    imageSrc: "/fried-onion.png",
+    imageAlt: "Fried onion birista — crispy golden-fried onion slices for export",
+    accentColor: "terracotta" as const,
+  },
 ];
 
 const freshProducts = [
@@ -105,7 +120,7 @@ export default function Products() {
           </RevealText>
           <FadeUp delay={0.25}>
             <p className="mt-5 text-soil/65 font-poppins text-base leading-relaxed">
-              Whether you need a container of fresh onions or a tonne of dehydrated flakes, the process behind it is identical: careful sourcing, honest grading, and documentation that holds up to scrutiny.
+              Whether you need a container of fresh onions, a tonne of dehydrated flakes or powder, or export-grade fried onion, the process behind it is identical: careful sourcing, honest grading, and documentation that holds up to scrutiny.
             </p>
           </FadeUp>
         </div>
@@ -121,7 +136,7 @@ export default function Products() {
               <span className="h-px flex-1 bg-terracotta/20" />
             </div>
           </FadeUp>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {dehydratedProducts.map((product, i) => (
               <ProductCard key={product.name} {...product} index={i} />
             ))}

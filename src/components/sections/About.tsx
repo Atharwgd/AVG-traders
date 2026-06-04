@@ -35,7 +35,7 @@ export default function About() {
                   What we do well is unglamorous and exactly what matters in this trade: sourcing from growers and mandis we actually know, grading honestly, packing properly, and handling documentation and logistics so every container lands clean, on time, and as specified. For two generations, our family has built its name trading onions through these markets — and that name is the reason buyers keep coming back.
                 </p>
                 <p>
-                  Buyers come back because we'd rather lose a deal than ship an onion we wouldn't stand behind. That same discipline runs through both sides of our business — the fresh onions we've traded for two generations, and the dehydrated onion flakes and powder we now supply to food manufacturers and importers around the world.
+                  Buyers come back because we'd rather lose a deal than ship an onion we wouldn't stand behind. That same discipline runs through both sides of our business — the fresh onions we've traded for two generations, and the dehydrated onion flakes, powder, and fried onion (birista) we now supply to food manufacturers and importers around the world.
                 </p>
               </div>
             </FadeUp>

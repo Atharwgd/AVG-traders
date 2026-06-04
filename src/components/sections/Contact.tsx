@@ -12,6 +12,7 @@ const products = [
   "White Onion",
   "Onion Flakes (Dehydrated)",
   "Onion Powder (Dehydrated)",
+  "Fried Onion / Birista",
   "Multiple / Other",
 ];
 
