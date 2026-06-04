@@ -1,37 +1,44 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Lenis from "lenis";
+import { useEffect } from "react";
 
 export default function LenisProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const lenisRef = useRef<Lenis | null>(null);
-
   useEffect(() => {
+    // Skip on reduced motion or if browser APIs are unavailable
+    if (typeof window === "undefined") return;
     const prefersReduced =
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
+    let lenis: { raf: (t: number) => void; destroy: () => void } | null = null;
+    let rafId: number;
 
-    lenisRef.current = lenis;
+    // Dynamically import Lenis so a failure doesn't crash the whole app
+    import("lenis")
+      .then(({ default: Lenis }) => {
+        lenis = new Lenis({
+          duration: 1.2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+        });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+        function raf(time: number) {
+          lenis!.raf(time);
+          rafId = requestAnimationFrame(raf);
+        }
+        rafId = requestAnimationFrame(raf);
+      })
+      .catch(() => {
+        // Lenis failed to load — page still works, just without smooth scroll
+      });
 
     return () => {
-      lenis.destroy();
-      lenisRef.current = null;
+      if (rafId) cancelAnimationFrame(rafId);
+      if (lenis) lenis.destroy();
     };
   }, []);
 
