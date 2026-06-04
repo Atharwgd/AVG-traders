@@ -17,10 +17,8 @@ const dehydratedProducts = [
       { label: "Use", value: "Seasoning blends, ready meals, snacks, HoReCa" },
       { label: "Pack", value: "Bulk & Retail" },
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",
-    imageAlt:
-      "Dehydrated onion flakes — [PLACEHOLDER: Replace with real product photo]",
+    imageSrc: "/dehydrated-onion-flakes.jpg.png",
+    imageAlt: "AVG Traders dehydrated onion flakes — kibbled, chopped and minced cuts",
     accentColor: "terracotta" as const,
   },
   {
@@ -34,10 +32,8 @@ const dehydratedProducts = [
       { label: "Use", value: "Spice blends, soups, sauces, snack coatings" },
       { label: "Pack", value: "Bulk & Retail" },
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80",
-    imageAlt:
-      "Dehydrated onion powder — [PLACEHOLDER: Replace with real product photo]",
+    imageSrc: "/dehydrated-onion-powder.jpg.png",
+    imageAlt: "AVG Traders dehydrated onion powder — finely milled food-grade powder and granules",
     accentColor: "olive" as const,
   },
 ];
@@ -54,10 +50,8 @@ const freshProducts = [
       { label: "Use", value: "Retail, wholesale, food service" },
       { label: "Avail.", value: "Year-round" },
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&q=80",
-    imageAlt:
-      "Red onions — [PLACEHOLDER: Replace with real product photo of Nashik red onions]",
+    imageSrc: "/red-onion.jpg.png",
+    imageAlt: "Nashik red onions — deep colour, robust flavour, export grade",
     accentColor: "maroon" as const,
   },
   {
@@ -70,10 +64,8 @@ const freshProducts = [
       { label: "Flavour", value: "Mild–Medium" },
       { label: "Use", value: "Fresh consumption, salads, retail" },
     ],
-    imageSrc:
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=800&q=80",
-    imageAlt:
-      "Pink onions — [PLACEHOLDER: Replace with real product photo of Nashik pink onions]",
+    imageSrc: "/pink-onion.jpg.png",
+    imageAlt: "Nashik pink onions — rose-coloured skin, mild to medium flavour",
     accentColor: "maroon" as const,
   },
   {
@@ -87,9 +79,8 @@ const freshProducts = [
       { label: "Use", value: "Fresh, processing, dehydration" },
     ],
     imageSrc:
-      "https://images.unsplash.com/photo-1528750717929-32abb73d3bd9?w=800&q=80",
-    imageAlt:
-      "White onions — [PLACEHOLDER: Replace with real product photo of white onions]",
+      "/white-onion.jpg.png",
+    imageAlt: "White onions — crisp, mild, preferred base for dehydrated onion products",
     accentColor: "maroon" as const,
   },
 ];
