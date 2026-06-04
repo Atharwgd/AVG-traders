@@ -7,25 +7,25 @@ import RevealText from "@/components/ui/RevealText";
 
 const photos = [
   {
-    src: "/storage-stock.jpg.jpeg",
+    src: "/storage-stock.jpg",
     alt: "AVG Traders onion storage warehouse — bulk red onions stored at our facility in Nashik",
     caption: "Storage & Stock",
     span: "lg:col-span-2",
   },
   {
-    src: "/grading-sorting.jpg.jpeg",
+    src: "/grading-sorting.jpg",
     alt: "Onion grading and sorting — workers hand-sorting red onions at AVG Traders facility",
     caption: "Grading & Sorting",
     span: "",
   },
   {
-    src: "/packing.jpg.jpeg",
+    src: "/packing.jpg",
     alt: "Packed onion bags — red onions packed in mesh bags ready for export",
     caption: "Packing",
     span: "",
   },
   {
-    src: "/container-loading.jpg.png",
+    src: "/container-loading.png",
     alt: "Container loading — workers loading packed onion bags into an export container",
     caption: "Container Loading",
     span: "lg:col-span-2 lg:col-start-1",

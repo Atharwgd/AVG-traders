@@ -34,7 +34,7 @@ export default function Hero() {
         style={{ y: imageY }}
       >
         <Image
-          src="/hero.jpg.png"
+          src="/hero.png"
           alt="AVG Traders — onion trading and export operations, Nashik, Maharashtra"
           fill
           priority
