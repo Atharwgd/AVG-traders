@@ -151,12 +151,12 @@ export default function Products() {
           <p className="text-soil/60 font-poppins text-sm mb-5">
             Specific grade, size, or packaging requirement? We work to your spec.
           </p>
-          <Link
+          <a
             href="#contact"
             className="inline-block px-8 py-4 bg-terracotta text-cream font-poppins font-semibold rounded-full hover:bg-maroon transition-colors duration-300 text-sm tracking-wide"
           >
             Discuss Your Requirements
-          </Link>
+          </a>
         </FadeUp>
       </div>
     </section>

@@ -4,10 +4,10 @@ import FadeUp from "@/components/ui/FadeUp";
 import Marquee from "@/components/ui/Marquee";
 
 const stats = [
-  { value: "5,000+", label: "Tonnes traded" },
-  { value: "100+", label: "Export shipments" },
-  { value: "7+", label: "Countries served" },
-  { value: "15+", label: "Years in the trade" },
+  { value: "10,000+", label: "Tonnes traded" },
+  { value: "300+", label: "Export shipments" },
+  { value: "10+", label: "Countries served" },
+  { value: "20+", label: "Years in the trade" },
 ];
 
 const destinations = [

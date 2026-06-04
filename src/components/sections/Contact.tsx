@@ -97,9 +97,10 @@ export default function Contact() {
                     <div className="text-soil/40 text-xs uppercase tracking-wide mb-0.5">Address</div>
                     {/* PLACEHOLDER: Replace with real office address */}
                     <address className="not-italic leading-relaxed">
-                      AVG Traders<br />
-                      Yeola, Nashik District<br />
-                      Maharashtra 423401, India
+                      Atul Vilas Gade AVG Onion Suppliers<br />
+                      Chatrapati Sambhajinagar - Nashik Highway<br />
+                      Andarsul, 423402<br />
+                      Tal - Yeola, Nashik, Maharashtra
                     </address>
                   </div>
                 </div>

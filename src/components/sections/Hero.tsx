@@ -97,14 +97,8 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center gap-4 mt-2"
         >
           <Link
-            href="#contact"
-            className="px-8 py-4 bg-terracotta text-cream font-poppins font-semibold rounded-full hover:bg-maroon transition-colors duration-300 text-sm tracking-wide"
-          >
-            Get a Quote
-          </Link>
-          <Link
             href="#products"
-            className="text-cream/80 font-poppins font-medium text-sm tracking-wide border-b border-cream/40 pb-0.5 hover:text-cream hover:border-cream transition-all duration-300"
+            className="px-8 py-4 bg-terracotta text-cream font-poppins font-semibold rounded-full hover:bg-maroon transition-colors duration-300 text-sm tracking-wide"
           >
             What We Trade →
           </Link>

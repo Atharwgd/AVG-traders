@@ -69,7 +69,8 @@ export default function Footer() {
                 +91 70588 75028
               </a>
               <address className="not-italic leading-relaxed text-cream/50">
-                Yeola, Nashik<br />
+                Andarsul, 423402<br />
+                Tal - Yeola, Nashik<br />
                 Maharashtra, India
               </address>
             </div>
