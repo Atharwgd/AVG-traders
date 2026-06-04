@@ -55,8 +55,8 @@ export default function About() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               {/* PLACEHOLDER IMAGE: Replace with founder / team photo at showroom or facility */}
               <Image
-                src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=900&q=80"
-                alt="AVG Traders team — [PLACEHOLDER: Replace with real founder or team photo]"
+                src="/storage-stock.jpg"
+                alt="AVG Traders — bulk red onions stored at our facility in Nashik"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

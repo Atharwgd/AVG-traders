@@ -76,8 +76,9 @@ async function appendToSheet(data: Record<string, string>) {
     data.message ?? "",
   ];
 
+  const range = encodeURIComponent("Sheet1!A:G");
   const res = await fetch(
-    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:G:append?valueInputOption=USER_ENTERED`,
+    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append?valueInputOption=USER_ENTERED`,
     {
       method: "POST",
       headers: {
