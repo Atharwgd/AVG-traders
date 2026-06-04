@@ -6,7 +6,7 @@
     "dev": "next dev",
     "prebuild": "node -e \"const fs=require('fs');fs.rmSync('.next',{recursive:true,force:true});console.log('Cleared .next cache')\"",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
