@@ -7,40 +7,28 @@ import RevealText from "@/components/ui/RevealText";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
-    alt: "Stored onion stock — [PLACEHOLDER: Replace with photo of AVG Traders warehouse / stored stock]",
+    src: "/storage-stock.jpg.jpeg",
+    alt: "AVG Traders onion storage warehouse — bulk red onions stored at our facility in Nashik",
     caption: "Storage & Stock",
     span: "lg:col-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
-    alt: "Onion grading and sorting — [PLACEHOLDER: Replace with photo of grading/labour unit]",
+    src: "/grading-sorting.jpg.jpeg",
+    alt: "Onion grading and sorting — workers hand-sorting red onions at AVG Traders facility",
     caption: "Grading & Sorting",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80",
-    alt: "Onion packing — [PLACEHOLDER: Replace with photo of packing operation]",
+    src: "/packing.jpg.jpeg",
+    alt: "Packed onion bags — red onions packed in mesh bags ready for export",
     caption: "Packing",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80",
-    alt: "Container loading — [PLACEHOLDER: Replace with photo of previous shipment / container loading]",
+    src: "/container-loading.jpg.png",
+    alt: "Container loading — workers loading packed onion bags into an export container",
     caption: "Container Loading",
-    span: "lg:col-span-2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
-    alt: "AVG Traders team — [PLACEHOLDER: Replace with team photo]",
-    caption: "The Team",
-    span: "",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800&q=80",
-    alt: "Nashik onion mandi — [PLACEHOLDER: Replace with mandi or sourcing photo]",
-    caption: "Sourcing — Nashik Mandi",
-    span: "",
+    span: "lg:col-span-2 lg:col-start-1",
   },
 ];
 
@@ -63,7 +51,7 @@ export default function Gallery() {
           </RevealText>
           <FadeUp delay={0.2}>
             <p className="mt-5 text-cream/55 font-poppins text-base leading-relaxed">
-              Every photo below shows what we actually do — real stock, real people, real containers. These placeholders will be replaced with images from our facility.
+              Real stock, real people, real containers — from our facility in the Nashik onion belt.
             </p>
           </FadeUp>
         </div>
@@ -88,7 +76,6 @@ export default function Gallery() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-soil/70 via-transparent to-transparent" />
-                {/* Caption */}
                 <figcaption className="absolute bottom-4 left-4 font-poppins text-xs font-medium text-cream/80 tracking-wide uppercase">
                   {photo.caption}
                 </figcaption>
