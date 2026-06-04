@@ -34,8 +34,8 @@ export default function Hero() {
         style={{ y: imageY }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=1800&q=85"
-          alt="Onion field at harvest — Nashik, Maharashtra"
+          src="/hero.jpg.png"
+          alt="AVG Traders — onion trading and export operations, Nashik, Maharashtra"
           fill
           priority
           className="object-cover"
