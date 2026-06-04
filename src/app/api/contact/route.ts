@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import * as crypto from "crypto";
 
-// ─── Google Sheets via direct REST (avoids googleapis/jwa OpenSSL 3 issue) ───
+// ─── Google Sheets via Web Crypto API (works with OpenSSL 3 / Node 22) ────────
+// Uses globalThis.crypto.subtle (Web Crypto) instead of node:crypto,
+// which avoids the DECODER routines::unsupported error on Node 22.
 
 function normalizeKey(raw: string): string {
   return raw
@@ -11,7 +12,7 @@ function normalizeKey(raw: string): string {
     .trim();
 }
 
-function createJWT(clientEmail: string, privateKey: string): string {
+async function createJWT(clientEmail: string, privateKeyPem: string): Promise<string> {
   const header = Buffer.from(
     JSON.stringify({ alg: "RS256", typ: "JWT" })
   ).toString("base64url");
@@ -29,21 +30,37 @@ function createJWT(clientEmail: string, privateKey: string): string {
 
   const signingInput = `${header}.${payload}`;
 
-  // crypto.sign works correctly with OpenSSL 3 (Node 20/22)
-  const signature = crypto.sign(
-    "SHA256",
-    Buffer.from(signingInput),
-    { key: privateKey, padding: crypto.constants.RSA_PKCS1_PADDING }
+  // Strip PEM headers and decode base64 to get raw DER bytes
+  const keyBody = privateKeyPem
+    .replace(/-----BEGIN PRIVATE KEY-----/g, "")
+    .replace(/-----END PRIVATE KEY-----/g, "")
+    .replace(/\s+/g, "");
+
+  const keyBuffer = Buffer.from(keyBody, "base64");
+
+  // Web Crypto importKey — fully compatible with OpenSSL 3 on Node 22
+  const cryptoKey = await globalThis.crypto.subtle.importKey(
+    "pkcs8",
+    keyBuffer,
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false,
+    ["sign"]
   );
 
-  return `${signingInput}.${signature.toString("base64url")}`;
+  const signature = await globalThis.crypto.subtle.sign(
+    "RSASSA-PKCS1-v1_5",
+    cryptoKey,
+    Buffer.from(signingInput)
+  );
+
+  return `${signingInput}.${Buffer.from(signature).toString("base64url")}`;
 }
 
 async function getAccessToken(
   clientEmail: string,
   privateKey: string
 ): Promise<string> {
-  const jwt = createJWT(clientEmail, privateKey);
+  const jwt = await createJWT(clientEmail, privateKey);
 
   const res = await fetch("https://oauth2.googleapis.com/token", {
     method: "POST",
@@ -54,7 +71,7 @@ async function getAccessToken(
     }),
   });
 
-  const data = await res.json() as { access_token?: string; error?: string };
+  const data = (await res.json()) as { access_token?: string; error?: string };
   if (!res.ok) throw new Error(`Google auth failed: ${JSON.stringify(data)}`);
   return data.access_token!;
 }
