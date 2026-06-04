@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { google } from "googleapis";
 
-// ── Google Sheets config ──────────────────────────────────────────────────────
-// Set these in .env.local (never commit that file).
-// GOOGLE_SHEET_ID   — the long ID from your sheet's URL
-// GOOGLE_CLIENT_EMAIL — service account email from the JSON key file
-// GOOGLE_PRIVATE_KEY  — private_key field from the JSON key file (keep the \n chars)
-// ─────────────────────────────────────────────────────────────────────────────
-
 async function appendToSheet(data: Record<string, string>) {
   const auth = new google.auth.GoogleAuth({
     credentials: {
@@ -20,7 +13,7 @@ async function appendToSheet(data: Record<string, string>) {
   const sheets = google.sheets({ version: "v4", auth });
 
   const row = [
-    new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }), // Timestamp (IST)
+    new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
     data.name ?? "",
     data.company ?? "",
     data.country ?? "",
@@ -38,25 +31,34 @@ async function appendToSheet(data: Record<string, string>) {
 }
 
 export async function POST(req: NextRequest) {
-  try {
-    const body = await req.json();
-    console.log("[Contact inquiry]", body);
+  let body: Record<string, string> = {};
 
-    // Check env vars are set before attempting Sheets write
-    if (
-      process.env.GOOGLE_SHEET_ID &&
-      process.env.GOOGLE_CLIENT_EMAIL &&
-      process.env.GOOGLE_PRIVATE_KEY
-    ) {
+  // Step 1 — parse body. If this fails, return 400.
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ ok: false, reason: "invalid_json" }, { status: 400 });
+  }
+
+  console.log("[Contact inquiry]", body);
+
+  // Step 2 — write to Sheets. Fail silently so the user always gets a success.
+  if (
+    process.env.GOOGLE_SHEET_ID &&
+    process.env.GOOGLE_CLIENT_EMAIL &&
+    process.env.GOOGLE_PRIVATE_KEY
+  ) {
+    try {
       await appendToSheet(body);
       console.log("[Sheets] Row appended successfully");
-    } else {
-      console.warn("[Sheets] Env vars not set — skipping sheet write");
+    } catch (sheetErr) {
+      // Log the error but don't fail the request — inquiry is not lost (logged above)
+      console.error("[Sheets] Failed to append row:", sheetErr);
     }
-
-    return NextResponse.json({ ok: true }, { status: 200 });
-  } catch (err) {
-    console.error("[Contact] Error:", err);
-    return NextResponse.json({ ok: false }, { status: 500 });
+  } else {
+    console.warn("[Sheets] Env vars not set — skipping sheet write");
   }
+
+  // Always return success to the user
+  return NextResponse.json({ ok: true }, { status: 200 });
 }
