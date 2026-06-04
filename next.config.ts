@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // Disable Next.js image optimization — serves images as-is.
+    // Avoids Sharp/JPEG pipeline failures on Hostinger Node 22.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
