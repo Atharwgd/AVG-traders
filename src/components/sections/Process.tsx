@@ -120,7 +120,7 @@ export default function Process() {
         {/* Header */}
         <div className="max-w-2xl mb-16">
           <FadeUp>
-            <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta mb-6">
+            <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
               How It Works
             </p>
           </FadeUp>
@@ -142,7 +142,7 @@ export default function Process() {
         {/* Certifications */}
         <FadeUp>
           <div className="border-t border-sand pt-16">
-            <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta mb-8">
+            <p className="font-fraunces text-xl tracking-[0.2em] uppercase text-terracotta mb-8">
               Certifications & Compliance
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

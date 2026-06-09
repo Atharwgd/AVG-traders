@@ -29,7 +29,7 @@ export default function TrackRecord() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <FadeUp>
-          <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-blush/70 mb-10 text-center lg:text-left">
+          <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-blush/70 mb-10 text-center lg:text-left">
             Track Record
           </p>
         </FadeUp>

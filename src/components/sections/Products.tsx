@@ -107,7 +107,7 @@ export default function Products() {
         {/* Header */}
         <div className="max-w-2xl mb-16 lg:mb-20">
           <FadeUp>
-            <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta mb-6">
+            <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
               What We Trade
             </p>
           </FadeUp>

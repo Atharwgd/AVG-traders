@@ -10,7 +10,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Section label */}
         <FadeUp>
-          <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta mb-8">
+          <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-8">
             Who We Are
           </p>
         </FadeUp>

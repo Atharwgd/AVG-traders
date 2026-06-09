@@ -53,7 +53,7 @@ export default function Contact() {
           <div className="flex flex-col gap-8">
             <div>
               <FadeUp>
-                <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta mb-6">
+                <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
                   Get in Touch
                 </p>
               </FadeUp>

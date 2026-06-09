@@ -35,11 +35,11 @@ export default function NavBar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`font-poppins font-bold text-lg tracking-tight transition-colors duration-300 ${
-            scrolled ? "text-soil" : "text-cream"
+          className={`font-poppins font-bold text-2xl tracking-tight transition-colors duration-300 ${
+            scrolled ? "text-soil" : "text-white"
           }`}
         >
-          AVG <span className="text-terracotta">Traders</span>
+          AVG <span className={scrolled ? "text-terracotta" : "text-white"}>Traders</span><span className="ml-1">🧅</span>
         </Link>
 
         {/* Desktop links */}
