@@ -22,7 +22,7 @@ export default function WhatsNext() {
 
       <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center gap-8">
         <FadeUp>
-          <p className="font-fraunces text-xs tracking-[0.2em] uppercase text-terracotta">
+          <p className="font-fraunces text-[1.35rem] tracking-[0.2em] uppercase text-terracotta">
             What&apos;s Next
           </p>
         </FadeUp>
