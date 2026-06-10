@@ -8,16 +8,13 @@ export default function CustomCursor() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Only show on true pointer devices (not touch screens)
     if (typeof window === "undefined") return;
-    const hasHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    if (!hasHover) return;
-
-    setVisible(true);
 
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
+
+    setVisible(true);
 
     let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
     let rafId: number;
@@ -39,14 +36,14 @@ export default function CustomCursor() {
     rafId = requestAnimationFrame(animate);
 
     const onEnter = () => {
-      ring.style.width = "60px";
-      ring.style.height = "60px";
+      ring.style.width = "42px";
+      ring.style.height = "42px";
       ring.style.opacity = "0.9";
       dot.style.transform = "translate(-50%, -50%) scale(0.5)";
     };
     const onLeave = () => {
-      ring.style.width = "36px";
-      ring.style.height = "36px";
+      ring.style.width = "25px";
+      ring.style.height = "25px";
       ring.style.opacity = "0.6";
       dot.style.transform = "translate(-50%, -50%) scale(1)";
     };
@@ -73,12 +70,10 @@ export default function CustomCursor() {
     };
   }, []);
 
-  if (!visible) return null;
-
   return (
     <>
-      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
-      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
+      <div ref={dotRef} className="cursor-dot" aria-hidden="true" style={visible ? {} : { display: "none" }} />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" style={visible ? {} : { display: "none" }} />
     </>
   );
 }
