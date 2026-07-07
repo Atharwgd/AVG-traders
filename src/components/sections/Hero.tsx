@@ -48,7 +48,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center gap-7">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 pt-24 pb-28 text-center flex flex-col items-center gap-7">
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -110,7 +110,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 1, delay: 1.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2 hidden [@media(min-height:640px)]:flex"
       >
         <span className="font-poppins text-xs tracking-[0.2em] uppercase text-cream/50">Scroll</span>
         <motion.div
