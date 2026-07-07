@@ -10,7 +10,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Section label */}
         <FadeUp>
-          <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-8">
+          <p className="font-fraunces text-base sm:text-lg tracking-[0.2em] uppercase text-terracotta mb-8">
             Who We Are
           </p>
         </FadeUp>
@@ -29,13 +29,13 @@ export default function About() {
             <FadeUp delay={0.2}>
               <div className="flex flex-col gap-5 text-soil/75 font-poppins text-base leading-relaxed">
                 <p>
-                  AVG Traders is a trading and export house rooted in the Nashik onion belt — the Lasalgaon–Yeola region that moves more onions than anywhere else in India. We're not farmers, and we're not a factory. We're the link that makes sure the right onions, at the right grade, reach buyers who can't afford surprises.
+                  AVG Traders is a trading and export house rooted in the Nashik onion belt — the Lasalgaon–Yeola region that moves more onions than anywhere else in India. We're the link that makes sure the right onions, at the right grade, reach buyers who can't afford surprises.
                 </p>
                 <p>
-                  What we do well is unglamorous and exactly what matters in this trade: sourcing from growers and mandis we actually know, grading honestly, packing properly, and handling documentation and logistics so every container lands clean, on time, and as specified. For two generations, our family has built its name trading onions through these markets — and that name is the reason buyers keep coming back.
+                  What we do is exactly what matters in this trade: sourcing from growers and mandis we actually know, grading honestly, packing properly, and handling documentation and logistics so every container lands clean and on time. For two generations, our family has built its name trading through these markets.
                 </p>
                 <p>
-                  Buyers come back because we'd rather lose a deal than ship an onion we wouldn't stand behind. That same discipline runs through both sides of our business — the fresh onions we've traded for two generations, and the dehydrated onion flakes, powder, and fried onion (birista) we now supply to food manufacturers and importers around the world.
+                  Buyers come back because we'd rather lose a deal than ship a product we wouldn't stand behind. That discipline runs through everything we trade — fresh onions and ginger, and the dehydrated onion flakes, powder, and fried onion (birista) we supply worldwide.
                 </p>
               </div>
             </FadeUp>

@@ -13,7 +13,7 @@ export default function Footer() {
               AVG <span className="text-terracotta">Traders</span>
             </p>
             <p className="font-poppins text-sm leading-relaxed max-w-xs">
-              Trusted onion traders and exporters from the Nashik belt — supplying fresh and dehydrated onions to buyers worldwide since the early 2000s.
+              Trusted traders and exporters from the Nashik belt — supplying fresh onions, ginger, and dehydrated onion products worldwide since the early 2000s.
             </p>
             <a
               href="https://www.linkedin.com/company/avg-traders/"

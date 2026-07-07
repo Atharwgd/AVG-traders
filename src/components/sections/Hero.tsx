@@ -86,7 +86,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.95 }}
           className="max-w-2xl text-cream/75 font-poppins font-normal text-base sm:text-lg leading-relaxed"
         >
-          AVG Traders supplies the world with India's onions — fresh red, pink, and white bulbs, dehydrated onion flakes, powder, and fried onion (birista) — built on honest grading, dependable supply, and shipments that arrive exactly as promised.
+          AVG Traders supplies India's finest produce — fresh onions and ginger, dehydrated onion flakes, powder, and fried onion (birista) — graded honestly and shipped exactly as promised.
         </motion.p>
 
         {/* CTAs */}

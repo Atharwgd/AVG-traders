@@ -10,6 +10,7 @@ const products = [
   "Red Onion",
   "Pink Onion",
   "White Onion",
+  "Fresh Ginger",
   "Onion Flakes (Dehydrated)",
   "Onion Powder (Dehydrated)",
   "Fried Onion / Birista",
@@ -53,7 +54,7 @@ export default function Contact() {
           <div className="flex flex-col gap-8">
             <div>
               <FadeUp>
-                <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
+                <p className="font-fraunces text-base sm:text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
                   Get in Touch
                 </p>
               </FadeUp>
@@ -67,7 +68,7 @@ export default function Contact() {
 
             <FadeUp delay={0.2}>
               <p className="text-soil/65 font-poppins text-base leading-relaxed">
-                Whether you have a specific grade in mind or want to understand what we can reliably supply, we&apos;re happy to have a straightforward conversation. No sales pressure — just a direct discussion about whether we&apos;re the right fit.
+                Whether you have a specific grade in mind or want to know what we can reliably supply, we&apos;re happy to talk. No sales pressure — just a direct discussion about fit.
               </p>
             </FadeUp>
 
@@ -116,6 +117,15 @@ export default function Contact() {
               suppressHydrationWarning
               className="bg-cream rounded-2xl border border-sand p-8 flex flex-col gap-5"
             >
+              {/* Honeypot — hidden from real users, catches bots */}
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="block font-poppins text-xs font-medium text-soil/60 uppercase tracking-wide mb-2">

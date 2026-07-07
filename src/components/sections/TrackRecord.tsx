@@ -29,7 +29,7 @@ export default function TrackRecord() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Label */}
         <FadeUp>
-          <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-blush/70 mb-10 text-center lg:text-left">
+          <p className="font-fraunces text-base sm:text-lg tracking-[0.2em] uppercase text-blush/70 mb-10 text-center lg:text-left">
             Track Record
           </p>
         </FadeUp>
@@ -39,7 +39,7 @@ export default function TrackRecord() {
           {stats.map((stat, i) => (
             <FadeUp key={stat.label} delay={i * 0.1}>
               <div className="flex flex-col gap-2 border-l-2 border-terracotta/40 pl-5">
-                <span className="font-poppins font-extrabold text-5xl lg:text-6xl text-cream leading-none tabular-nums">
+                <span className="font-poppins font-extrabold text-3xl sm:text-5xl lg:text-6xl text-cream leading-none tabular-nums">
                   {stat.value}
                 </span>
                 <span className="font-poppins text-sm text-cream/50 font-medium tracking-wide">

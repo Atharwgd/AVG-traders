@@ -39,7 +39,7 @@ export default function Gallery() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <FadeUp>
-            <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-blush/70 mb-6">
+            <p className="font-fraunces text-base sm:text-lg tracking-[0.2em] uppercase text-blush/70 mb-6">
               On the Ground
             </p>
           </FadeUp>

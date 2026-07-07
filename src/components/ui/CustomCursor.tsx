@@ -50,23 +50,24 @@ export default function CustomCursor() {
 
     document.addEventListener("mousemove", onMove);
 
-    const attach = () => {
-      document.querySelectorAll("a, button, [data-cursor]").forEach((el) => {
-        el.removeEventListener("mouseenter", onEnter);
-        el.removeEventListener("mouseleave", onLeave);
-        el.addEventListener("mouseenter", onEnter);
-        el.addEventListener("mouseleave", onLeave);
-      });
+    // Delegated hover detection — two listeners total instead of one per element
+    let hovering = false;
+    const onOver = (e: MouseEvent) => {
+      const interactive = (e.target as Element).closest?.("a, button, [data-cursor]");
+      if (interactive && !hovering) {
+        hovering = true;
+        onEnter();
+      } else if (!interactive && hovering) {
+        hovering = false;
+        onLeave();
+      }
     };
-    attach();
-
-    const observer = new MutationObserver(attach);
-    observer.observe(document.body, { childList: true, subtree: true });
+    document.addEventListener("mouseover", onOver);
 
     return () => {
       cancelAnimationFrame(rafId);
       document.removeEventListener("mousemove", onMove);
-      observer.disconnect();
+      document.removeEventListener("mouseover", onOver);
     };
   }, []);
 

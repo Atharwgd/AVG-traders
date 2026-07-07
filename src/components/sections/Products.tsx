@@ -9,7 +9,7 @@ const dehydratedProducts = [
   {
     name: "Dehydrated Onion Flakes",
     descriptor:
-      "Premium dried onion in kibbled, chopped, and minced cuts — long shelf life, consistent quality, ready for industrial use.",
+      "Premium dried onion in kibbled, chopped, and minced cuts — long shelf life and consistent quality.",
     chips: [
       { label: "Cuts", value: "Kibbled / Chopped / Minced" },
       { label: "Moisture", value: "<5%" },
@@ -24,7 +24,7 @@ const dehydratedProducts = [
   {
     name: "Dehydrated Onion Powder",
     descriptor:
-      "Finely milled onion powder and granules with consistent colour and flavour — built for spice houses and food processors.",
+      "Finely milled powder and granules with consistent colour and flavour — built for spice houses and processors.",
     chips: [
       { label: "Forms", value: "Powder / Granules" },
       { label: "Mesh", value: "Food-grade" },
@@ -39,7 +39,7 @@ const dehydratedProducts = [
   {
     name: "Fried Onion (Birista)",
     descriptor:
-      "Crispy golden-fried onion slices — a staple of biryani and HoReCa kitchens, now available in export-grade bulk packs.",
+      "Crispy golden-fried onion slices — a biryani and HoReCa staple, in export-grade bulk packs.",
     chips: [
       { label: "Colour", value: "Golden to dark brown" },
       { label: "Moisture", value: "<5%" },
@@ -98,6 +98,21 @@ const freshProducts = [
     imageAlt: "White onions — crisp, mild, preferred base for dehydrated onion products",
     accentColor: "maroon" as const,
   },
+  {
+    name: "Fresh Ginger",
+    descriptor:
+      "Aromatic Indian ginger with sharp pungency and high fibre — sourced and graded with the same discipline as our onions.",
+    chips: [
+      { label: "Colour", value: "Buff / Light brown" },
+      { label: "Sizes", value: "50g+ rhizomes" },
+      { label: "Flavour", value: "Sharp, aromatic" },
+      { label: "Use", value: "Fresh consumption, food processing" },
+      { label: "Avail.", value: "Year-round" },
+    ],
+    imageSrc: "/ginger.jpg",
+    imageAlt: "Fresh Indian ginger rhizomes — aromatic, export grade",
+    accentColor: "olive" as const,
+  },
 ];
 
 export default function Products() {
@@ -107,7 +122,7 @@ export default function Products() {
         {/* Header */}
         <div className="max-w-2xl mb-16 lg:mb-20">
           <FadeUp>
-            <p className="font-fraunces text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
+            <p className="font-fraunces text-base sm:text-lg tracking-[0.2em] uppercase text-terracotta mb-6">
               What We Trade
             </p>
           </FadeUp>
@@ -120,7 +135,7 @@ export default function Products() {
           </RevealText>
           <FadeUp delay={0.25}>
             <p className="mt-5 text-soil/65 font-poppins text-base leading-relaxed">
-              Whether you need a container of fresh onions, a tonne of dehydrated flakes or powder, or export-grade fried onion, the process behind it is identical: careful sourcing, honest grading, and documentation that holds up to scrutiny.
+              Fresh onions and ginger, dehydrated flakes and powder, or export-grade fried onion — the process behind every shipment is identical: careful sourcing, honest grading, and documentation that holds up.
             </p>
           </FadeUp>
         </div>
@@ -149,7 +164,7 @@ export default function Products() {
             <div className="flex items-center gap-4 mb-8">
               <span className="h-px flex-1 bg-maroon/20" />
               <h3 className="font-poppins font-bold text-xs tracking-[0.2em] uppercase text-maroon">
-                Fresh Onions
+                Fresh Onions &amp; Ginger
               </h3>
               <span className="h-px flex-1 bg-maroon/20" />
             </div>

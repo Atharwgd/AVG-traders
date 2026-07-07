@@ -11,7 +11,7 @@ export default function WhatsNext() {
       {/* Background texture */}
       <div className="absolute inset-0 opacity-30">
         <Image
-          src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1600&q=60"
+          src="/storage-stock.jpg"
           alt=""
           fill
           className="object-cover"
@@ -22,7 +22,7 @@ export default function WhatsNext() {
 
       <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center gap-8">
         <FadeUp>
-          <p className="font-fraunces text-[1.35rem] tracking-[0.2em] uppercase text-terracotta">
+          <p className="font-fraunces text-lg sm:text-[1.35rem] tracking-[0.2em] uppercase text-terracotta">
             What&apos;s Next
           </p>
         </FadeUp>
@@ -37,7 +37,7 @@ export default function WhatsNext() {
 
         <FadeUp delay={0.25}>
           <p className="max-w-2xl text-soil/65 font-poppins text-base sm:text-lg leading-relaxed">
-            The world wants Indian onions in more forms and more places. We&apos;re scaling our dehydrated onion and fried onion (birista) supply, deepening long-term partnerships with food manufacturers and importers, and opening new export markets — backed by the same sourcing and quality discipline that built our name over two generations.
+            The world wants Indian produce in more forms and more places. We&apos;re scaling our dehydrated and fried onion supply, deepening partnerships with food manufacturers and importers, and opening new export markets — backed by the discipline that built our name over two generations.
           </p>
         </FadeUp>
 
