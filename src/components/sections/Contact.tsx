@@ -141,6 +141,21 @@ export default function Contact() {
                 </div>
               </div>
 
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="email" className="block font-poppins text-xs font-medium text-soil/60 uppercase tracking-wide mb-2">
+                    Email <span className="text-terracotta">*</span>
+                  </label>
+                  <input id="email" name="email" type="email" required placeholder="you@company.com" className={inputClass} />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block font-poppins text-xs font-medium text-soil/60 uppercase tracking-wide mb-2">
+                    Phone / WhatsApp
+                  </label>
+                  <input id="phone" name="phone" type="tel" placeholder="+ country code and number" className={inputClass} />
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="country" className="block font-poppins text-xs font-medium text-soil/60 uppercase tracking-wide mb-2">
                   Country <span className="text-terracotta">*</span>

@@ -91,9 +91,11 @@ async function appendToSheet(data: Record<string, string>) {
     data.product ?? "",
     data.quantity ?? "",
     data.message ?? "",
+    data.email ?? "",
+    data.phone ?? "",
   ];
 
-  const range = encodeURIComponent("Sheet1!A:G");
+  const range = encodeURIComponent("Sheet1!A:I");
   const res = await fetch(
     `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append?valueInputOption=USER_ENTERED`,
     {
@@ -118,6 +120,8 @@ async function appendToSheet(data: Record<string, string>) {
 const FIELD_LIMITS: Record<string, number> = {
   name: 100,
   company: 100,
+  email: 150,
+  phone: 30,
   country: 60,
   product: 60,
   quantity: 100,
@@ -152,6 +156,8 @@ function sanitize(body: Record<string, unknown>): Record<string, string> | null 
     clean[field] = ((raw as string) ?? "").trim().slice(0, max);
   }
   if (!clean.name || !clean.country || !clean.product) return null;
+  // Email is required and must at least look like an address
+  if (!clean.email || !/^\S+@\S+\.\S+$/.test(clean.email)) return null;
   return clean;
 }
 
