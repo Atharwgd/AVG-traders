@@ -20,9 +20,15 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://avgtraders.com"),
   title: "AVG Traders — Trusted Onion & Ginger Exporters from Nashik, India",
   description:
     "AVG Traders is a trading and export house rooted in the Nashik onion belt. We supply fresh red, pink, and white onions, fresh ginger, and dehydrated onion flakes, powder, and fried onion (birista) to buyers worldwide.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/icon-192.png", sizes: "192x192", type: "image/png" }],
+    apple: [{ url: "/icon-180.png", sizes: "180x180" }],
+  },
   keywords: [
     "onion exporter India",
     "fresh onion export",
@@ -42,13 +48,16 @@ export const metadata: Metadata = {
       "Fresh red, pink & white onions, fresh ginger, dehydrated onion flakes, powder, and fried onion (birista) — sourced from Nashik and exported worldwide.",
     type: "website",
     locale: "en_IN",
+    url: "https://avgtraders.com/",
     siteName: "AVG Traders",
+    images: [{ url: "/og-image-1200x630-light.png", width: 1200, height: 630, alt: "AVG Traders" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AVG Traders — Onion Traders & Exporters, Nashik",
     description:
       "Fresh & dehydrated onions exported from the heart of India's onion trade.",
+    images: ["/twitter-card-1200x600-light.png"],
   },
   robots: { index: true, follow: true },
 };

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { label: "About", href: "#about" },
@@ -31,35 +32,26 @@ export default function NavBar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 lg:h-24">
         {/* Logo */}
-        <Link
-          href="/"
-          className={`font-poppins font-bold text-xl sm:text-2xl tracking-tight transition-colors duration-300 ${
-            scrolled ? "text-soil" : "text-white"
-          }`}
-        >
-          AVG <span className={scrolled ? "text-terracotta" : "text-white"}>Traders</span>
-          <svg
-            className={`inline-block ml-1.5 w-6 h-6 align-[-0.15em] ${scrolled ? "text-terracotta" : "text-white"}`}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+        <Link href="/" aria-label="AVG Traders — home" className="relative block h-16 lg:h-20 w-auto">
+          {/* Full-colour on cream (scrolled); dark variant over the hero photo */}
+          <Image
+            src="/logo-header-light.svg"
+            alt="AVG Traders"
+            width={220}
+            height={107}
+            priority
+            className={`h-16 lg:h-20 w-auto transition-opacity duration-300 ${scrolled ? "opacity-100" : "opacity-0"}`}
+          />
+          <Image
+            src="/logo-header-dark.svg"
+            alt=""
             aria-hidden="true"
-          >
-            {/* Onion bulb */}
-            <path d="M12 8c-3.6 0-6.5 2.6-6.5 6 0 3.6 2.9 6 6.5 6s6.5-2.4 6.5-6c0-3.4-2.9-6-6.5-6z" />
-            {/* Inner layer */}
-            <path d="M12 8c-1.6 1.4-2.6 3.5-2.6 6 0 2.4 1 4.6 2.6 6" />
-            <path d="M12 8c1.6 1.4 2.6 3.5 2.6 6 0 2.4-1 4.6-2.6 6" />
-            {/* Sprout */}
-            <path d="M12 8V5.5" />
-            <path d="M12 5.5c-.8-.8-1-2-.6-3 1 .3 1.7 1.2 1.8 2.2" />
-            <path d="M12 5.5c.8-.8 1-2 .6-3-1 .3-1.7 1.2-1.8 2.2" />
-          </svg>
+            width={220}
+            height={107}
+            className={`absolute inset-0 h-16 lg:h-20 w-auto transition-opacity duration-300 ${scrolled ? "opacity-0" : "opacity-100"}`}
+          />
         </Link>
 
         {/* Desktop links */}

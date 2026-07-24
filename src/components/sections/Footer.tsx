@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,9 +10,13 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="flex flex-col gap-4 lg:col-span-2">
-            <p className="font-poppins font-bold text-xl text-cream tracking-tight">
-              AVG <span className="text-terracotta">Traders</span>
-            </p>
+            <Image
+              src="/logo-header-dark.svg"
+              alt="AVG Traders"
+              width={220}
+              height={107}
+              className="h-20 lg:h-24 w-auto"
+            />
             <p className="font-poppins text-sm leading-relaxed max-w-xs">
               Trusted traders and exporters from the Nashik belt — supplying fresh onions, ginger, and dehydrated onion products worldwide since the early 2000s.
             </p>
