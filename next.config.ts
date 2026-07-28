@@ -1,33 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static HTML export — no Node server at runtime. Build outputs to ./out,
+  // which Hostinger serves as plain static files (near-zero resource use).
+  // Security headers previously set here now live in public/.htaccess, since
+  // export mode has no server to apply them. Also see the Google Apps Script
+  // form endpoint (contact form no longer needs a server route).
+  output: "export",
   images: {
-    // Disable Next.js image optimization — serves images as-is.
-    // Avoids Sharp/JPEG pipeline failures on Hostinger Node 22.
+    // Required for static export — no image optimization server.
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "plus.unsplash.com",
-      },
-    ],
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-        ],
-      },
-    ];
   },
 };
 

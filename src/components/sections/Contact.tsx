@@ -20,24 +20,40 @@ const products = [
 export default function Contact() {
   const [state, setState] = useState<FormState>("idle");
 
+  // Google Apps Script Web App URL that appends submissions to the Sheet.
+  // Set NEXT_PUBLIC_FORM_ENDPOINT at build time (Hostinger build env + .env.local).
+  const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setState("loading");
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
 
+    // Honeypot — hidden field; if a bot filled it, silently pretend success.
+    if (typeof data.website === "string" && data.website.length > 0) {
+      setState("success");
+      form.reset();
+      return;
+    }
+
+    if (!FORM_ENDPOINT) {
+      setState("error");
+      return;
+    }
+
+    setState("loading");
     try {
-      const res = await fetch("/api/contact", {
+      // Apps Script Web Apps don't send CORS headers, so we POST no-cors with a
+      // text/plain body (avoids a preflight). The response is opaque — if the
+      // request resolves without throwing, treat it as delivered.
+      await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data),
       });
-      if (res.ok) {
-        setState("success");
-        form.reset();
-      } else {
-        setState("error");
-      }
+      setState("success");
+      form.reset();
     } catch {
       setState("error");
     }

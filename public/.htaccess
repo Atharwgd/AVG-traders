@@ -1,0 +1,33 @@
+# AVG Traders — static export (Hostinger, Apache/LiteSpeed)
+
+# ── Security headers (previously set in next.config headers()) ──
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── Cache hashed build assets aggressively; keep HTML fresh ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Immutable, content-hashed JS/CSS from Next
+  <FilesMatch "\.(js|css|woff2?|ttf|otf)$">
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Images
+  <FilesMatch "\.(png|jpe?g|gif|svg|avif|webp|ico)$">
+    ExpiresDefault "access plus 30 days"
+  </FilesMatch>
+  # HTML should always revalidate so content updates show immediately
+  <FilesMatch "\.html$">
+    ExpiresDefault "access plus 0 seconds"
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── Gzip/compression ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/javascript application/javascript application/json image/svg+xml
+</IfModule>
